@@ -69,6 +69,7 @@ rockit-build: rga-build common_algorithm-build libv4l mpp libdrm
 			-DCMAKE_INSTALL_PREFIX="$(CURRENT_DIR)/$(PKG_BIN)" \
 			-DCMAKE_BUILD_TYPE=Release \
 			-DCMAKE_COLOR_MAKEFILE=OFF \
+			-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 			-DBUILD_DOC=OFF \
 			-DBUILD_DOCS=OFF \
 			-DBUILD_EXAMPLE=OFF \
