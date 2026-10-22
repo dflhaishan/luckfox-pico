@@ -336,6 +336,16 @@
 // I2C
 &i2c3 {
 	pinctrl-0 = <&i2c3m1_xfer>;
+
+    oled: oled@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        status = "okay";
+        reg = <0x3c>;
+        solomon,width = <128>;
+        solomon,height = <64>;
+        solomon,page-offset = <0>;
+        solomon,com-invdir;
+    };
 };
 &i2c0 {
 	pinctrl-0 = <&i2c0m2_xfer>;

@@ -204,7 +204,7 @@ static void ssd1307fb_update_display(struct ssd1307fb_par *par)
 			for (k = 0; k < m; k++) {
 				u8 byte = vmem[(8 * i + k) * line_length +
 					       j / 8];
-				u8 bit = (byte >> (j % 8)) & 1;
+				u8 bit = (byte >> (7 - j % 8)) & 1;
 				array->data[array_idx] |= bit << k;
 			}
 		}
